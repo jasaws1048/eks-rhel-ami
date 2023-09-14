@@ -43,10 +43,10 @@ endif
 
 arch ?= x86_64
 ifeq ($(arch), arm64)
-	instance_type ?= m5.large
+	instance_type ?= g5.xlarge
 	ami_name ?= amazon-eks-arm64-node-rhel-$(K8S_VERSION_MINOR)-v$(shell date +'%Y%m%d%H%M')
 else
-	instance_type ?= m5.large
+	instance_type ?= g5.xlarge
 	ami_name ?= amazon-eks-node-rhel-$(K8S_VERSION_MINOR)-v$(shell date +'%Y%m%d%H%M')
 endif
 
